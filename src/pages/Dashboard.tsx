@@ -1,6 +1,6 @@
 import { useAppStore } from '../store';
 import { Link } from 'react-router-dom';
-import { Megaphone, Users, Calendar, Bell, TrendingUp, Eye, Download, Bookmark, AlertTriangle, Shield, School, UserCheck, Plus } from 'lucide-react';
+import { Megaphone, Users, Calendar, Bell, TrendingUp, Eye, Download, Bookmark, AlertTriangle, Shield, School, UserCheck, Plus, CheckCircle } from 'lucide-react';
 
 export default function DashboardPage() {
   const { currentUser, schools, notices, events, notifications, users, achievements } = useAppStore();
@@ -59,10 +59,16 @@ export default function DashboardPage() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Recent Schools</h3>
-            <div className="space-y-3">
+          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4 mb-4 flex items-center gap-3">
+            <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400" />
+            <p className="text-sm text-green-800 dark:text-green-200">
+              <strong>100% Free & Open Source</strong> — No subscriptions, no premium features. All tools available to every school.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Recent Schools</h3>            <div className="space-y-3">
               {schools.slice(0, 5).map(s => (
                 <div key={s.id} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                   <div className="flex items-center gap-3">

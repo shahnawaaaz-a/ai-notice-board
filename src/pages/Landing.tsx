@@ -16,7 +16,7 @@ export default function LandingPage() {
           <div className="hidden md:flex items-center gap-6">
             <a href="#features" className="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600">Features</a>
             <a href="#how-it-works" className="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600">How it Works</a>
-            <a href="#pricing" className="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600">Pricing</a>
+            <a href="#pricing" className="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600">Free & Open Source</a>
           </div>
           <div className="flex items-center gap-3">
             <Link to="/login" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600">Sign In</Link>
@@ -191,37 +191,32 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* Free & Open Source */}
       <section id="pricing" className="py-20 px-4 bg-gray-50 dark:bg-gray-800/50">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Simple Pricing</h2>
-            <p className="mt-3 text-gray-600 dark:text-gray-400">Choose the plan that fits your school</p>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium px-4 py-1.5 rounded-full mb-4">
+            <CheckCircle className="w-4 h-4" /> 100% Free & Open Source
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Free Forever. No Hidden Costs.</h2>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            AI School Noticeboard is completely free to use for all schools. No subscriptions, no premium plans, no paywalls. Built for education, not profit.
+          </p>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { name: 'Starter', price: 'Free', desc: 'For small schools', features: ['Up to 100 students', 'Basic notices', '5 AI requests/day', 'Email support'] },
-              { name: 'Professional', price: '₹2,999/mo', desc: 'Most popular', features: ['Up to 1000 students', 'All features', '50 AI requests/day', 'Priority support', 'Custom branding'], popular: true },
-              { name: 'Enterprise', price: 'Custom', desc: 'For large institutions', features: ['Unlimited students', 'All features', 'Unlimited AI', 'Dedicated support', 'API access', 'Custom integrations'] },
-            ].map((plan, i) => (
-              <div key={i} className={`bg-white dark:bg-gray-800 rounded-xl p-6 border ${plan.popular ? 'border-indigo-500 ring-2 ring-indigo-500' : 'border-gray-200 dark:border-gray-700'}`}>
-                {plan.popular && <span className="inline-block bg-indigo-600 text-white text-xs font-medium px-3 py-1 rounded-full mb-3">Most Popular</span>}
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">{plan.name}</h3>
-                <p className="text-3xl font-bold text-gray-900 dark:text-white mt-2">{plan.price}</p>
-                <p className="text-sm text-gray-500 mt-1">{plan.desc}</p>
-                <ul className="mt-4 space-y-2">
-                  {plan.features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-500" /> {f}
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/register" className={`mt-6 block text-center py-2.5 rounded-lg font-medium text-sm ${plan.popular ? 'bg-indigo-600 text-white hover:bg-indigo-700' : 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200'}`}>
-                  Get Started
-                </Link>
+              { title: 'Unlimited Schools', desc: 'Register as many schools as you want' },
+              { title: 'Unlimited Users', desc: 'Add all teachers, students, and parents' },
+              { title: 'Unlimited Notices', desc: 'No limits on notices, events, or features' },
+            ].map((item, i) => (
+              <div key={i} className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                <CheckCircle className="w-8 h-8 text-green-500 mx-auto mb-3" />
+                <h3 className="font-semibold text-gray-900 dark:text-white">{item.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{item.desc}</p>
               </div>
             ))}
           </div>
+          <Link to="/register" className="mt-8 inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors">
+            Get Started Free →
+          </Link>
         </div>
       </section>
 
@@ -252,11 +247,11 @@ export default function LandingPage() {
 
       {/* CTA */}
       <section className="py-20 px-4">
-        <div className="max-w-3xl mx-auto text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12">
-          <h2 className="text-3xl font-bold text-white">Ready to Transform Your School?</h2>
-          <p className="mt-4 text-indigo-100">Join hundreds of schools already using AI School Noticeboard.</p>
-          <Link to="/register" className="mt-6 inline-block bg-white text-indigo-600 font-semibold px-8 py-3 rounded-xl hover:bg-indigo-50 transition-colors">
-            Register Your School — It's Free
+        <div className="max-w-3xl mx-auto text-center bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl p-12">
+          <h2 className="text-3xl font-bold text-white">Ready to Digitize Your School?</h2>
+          <p className="mt-4 text-green-50">Start using AI School Noticeboard today — completely free, forever.</p>
+          <Link to="/register" className="mt-6 inline-block bg-white text-green-700 font-semibold px-8 py-3 rounded-xl hover:bg-green-50 transition-colors">
+            Register Your School — Free Forever
           </Link>
         </div>
       </section>
@@ -275,7 +270,8 @@ export default function LandingPage() {
             <h4 className="font-semibold text-white mb-3">Product</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#features" className="hover:text-white">Features</a></li>
-              <li><a href="#pricing" className="hover:text-white">Pricing</a></li>
+              <li><a href="#" className="hover:text-white">Open Source</a></li>
+              <li><a href="#" className="hover:text-white">GitHub</a></li>
               <li><a href="#" className="hover:text-white">API Docs</a></li>
             </ul>
           </div>
@@ -298,7 +294,8 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="max-w-6xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-          © 2026 AI School Noticeboard. All rights reserved.
+          <p>© 2026 AI School Noticeboard. Free & Open Source Software.</p>
+          <p className="mt-2 text-gray-500">Made with ❤️ for schools everywhere. No paywalls. No subscriptions. Just education.</p>
         </div>
       </footer>
     </div>

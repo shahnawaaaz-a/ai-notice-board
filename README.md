@@ -243,7 +243,7 @@ Ready for integration with:
 
 ## 📄 License
 
-This project is open source and available for educational and commercial use.
+This project is **100% free and open source**. No subscriptions, no premium plans, no paywalls. Available for educational and commercial use under the MIT License.
 
 ## 🤝 Contributing
 
