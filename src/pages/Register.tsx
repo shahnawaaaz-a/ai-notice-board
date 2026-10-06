@@ -40,7 +40,7 @@ export default function RegisterPage() {
       logoUrl: '',
       website: formData.website,
       principalName: formData.principalName,
-      status: 'pending',
+      status: 'approved', // Auto-approve for free platform
       academicYear: '2025-2026',
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),

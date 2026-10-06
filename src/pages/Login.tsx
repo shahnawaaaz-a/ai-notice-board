@@ -28,13 +28,7 @@ export default function LoginPage() {
     }, 500);
   };
 
-  const demoAccounts = [
-    { role: 'Super Admin', email: 'super@schoolboard.ai', password: 'admin123' },
-    { role: 'School Admin', email: 'admin@demo-school.com', password: 'admin123' },
-    { role: 'Teacher', email: 'teacher1@demo-school.com', password: 'teacher123' },
-    { role: 'Student', email: 'student1@demo-school.com', password: 'student123' },
-    { role: 'Parent', email: 'parent1@demo-school.com', password: 'parent123' },
-  ];
+
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex">
@@ -98,22 +92,12 @@ export default function LoginPage() {
             Don't have an account? <Link to="/register" className="text-indigo-600 hover:underline font-medium">Register your school</Link>
           </p>
 
-          {/* Demo Accounts */}
-          <div className="mt-8 p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl border border-indigo-100 dark:border-indigo-800">
-            <p className="text-sm font-medium text-indigo-900 dark:text-indigo-300 mb-3">🎯 Demo Accounts — Click to fill:</p>
-            <div className="space-y-2">
-              {demoAccounts.map((acc, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => { setEmail(acc.email); setPassword(acc.password); }}
-                  className="w-full text-left px-3 py-2 rounded-lg bg-white dark:bg-gray-800 hover:bg-indigo-100 dark:hover:bg-indigo-900/40 transition-colors text-sm"
-                >
-                  <span className="font-medium text-gray-900 dark:text-white">{acc.role}</span>
-                  <span className="text-gray-500 ml-2">{acc.email}</span>
-                </button>
-              ))}
-            </div>
+          {/* Welcome Message */}
+          <div className="mt-8 p-4 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-100 dark:border-green-800">
+            <p className="text-sm font-medium text-green-900 dark:text-green-300 mb-2">✨ Welcome to AI School Noticeboard!</p>
+            <p className="text-xs text-green-700 dark:text-green-400">
+              Register your school to get started. It's completely free and takes just 2 minutes.
+            </p>
           </div>
         </div>
       </div>
@@ -123,22 +107,18 @@ export default function LoginPage() {
         <div className="max-w-md text-center text-white">
           <h2 className="text-3xl font-bold">One Smart Noticeboard</h2>
           <p className="mt-4 text-indigo-100 text-lg">Every School. Every Update. Powered by AI.</p>
-          <div className="mt-8 grid grid-cols-2 gap-4">
+          <div className="mt-8 space-y-4">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <p className="text-2xl font-bold">500+</p>
-              <p className="text-sm text-indigo-200">Schools</p>
+              <p className="text-lg font-semibold">✨ Start Fresh</p>
+              <p className="text-sm text-indigo-200 mt-1">No demo data. Build your school's digital noticeboard from scratch.</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <p className="text-2xl font-bold">50K+</p>
-              <p className="text-sm text-indigo-200">Users</p>
+              <p className="text-lg font-semibold">🎯 100% Free</p>
+              <p className="text-sm text-indigo-200 mt-1">No subscriptions, no hidden fees. Free for all schools forever.</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <p className="text-2xl font-bold">1M+</p>
-              <p className="text-sm text-indigo-200">Notices</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <p className="text-2xl font-bold">99.9%</p>
-              <p className="text-sm text-indigo-200">Uptime</p>
+              <p className="text-lg font-semibold">🤖 AI-Powered</p>
+              <p className="text-sm text-indigo-200 mt-1">Generate notices, translate content, and get smart answers.</p>
             </div>
           </div>
         </div>

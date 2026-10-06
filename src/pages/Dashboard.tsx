@@ -38,6 +38,14 @@ export default function DashboardPage() {
           </Link>
         </div>
 
+        {totalSchools === 0 && (
+          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 text-center">
+            <School className="w-12 h-12 text-blue-500 mx-auto mb-3" />
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">No Schools Registered Yet</h3>
+            <p className="text-gray-600 dark:text-gray-400 mt-2">Waiting for schools to register on the platform.</p>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { label: 'Total Schools', value: totalSchools, icon: School, color: 'bg-blue-500' },

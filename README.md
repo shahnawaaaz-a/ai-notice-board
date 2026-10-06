@@ -51,17 +51,17 @@ npm run dev
 npm run build
 ```
 
-### Demo Accounts
+### Getting Started
 
-Login at `/login` with these credentials:
+This is a **clean, empty application** with no pre-loaded data. Here's how to get started:
 
-| Role | Email | Password |
-|------|-------|----------|
-| Super Admin | super@schoolboard.ai | admin123 |
-| School Admin | admin@demo-school.com | admin123 |
-| Teacher | teacher1@demo-school.com | teacher123 |
-| Student | student1@demo-school.com | student123 |
-| Parent | parent1@demo-school.com | parent123 |
+1. **Register your school** at `/register` (3-step process)
+2. **Login** with your admin credentials at `/login`
+3. **Invite users** - Add teachers, students, and parents from the Users page
+4. **Create notices** - Start publishing announcements, events, and circulars
+5. **Manage your school** - Use the dashboard to manage classes, sections, and more
+
+The app starts completely empty - no demo accounts, no sample notices, no pre-filled data. Everything is created by you!
 
 ## 📁 Project Structure
 

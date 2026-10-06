@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { School, Megaphone, Users, Shield, Bot, Calendar, Bell, Globe, CheckCircle, ArrowRight, Star, Sparkles, BookOpen, Award } from 'lucide-react';
+import { School, Megaphone, Users, Shield, Bot, Calendar, Bell, Globe, CheckCircle, ArrowRight, Sparkles, BookOpen, Award } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -220,25 +220,22 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Why Choose Us */}
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Trusted by Schools</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Why Choose AI School Noticeboard?</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { name: 'Dr. Rajesh Kumar', role: 'Principal, DPS Delhi', text: 'This platform transformed how we communicate with parents. Notices reach everyone instantly.' },
-              { name: 'Mrs. Priya Sharma', role: 'Admin, GVI Bangalore', text: 'The AI features save us hours every week. Notice writing has never been easier.' },
-              { name: 'Mr. Anil Mehta', role: 'Principal, Springfield Academy', text: 'Finally, a platform that keeps all stakeholders informed without the chaos of WhatsApp groups.' },
+              { icon: '🔒', title: 'Complete Privacy', text: 'Your school data is completely isolated. No other school can access your information.' },
+              { icon: '⚡', title: 'Instant Setup', text: 'Register and start using in under 2 minutes. No complex configuration needed.' },
+              { icon: '🌍', title: 'Multi-Language', text: 'Support for English, Hindi, Urdu and more. Reach every parent in their language.' },
             ].map((t, i) => (
               <div key={i} className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-                <div className="flex gap-1 mb-3">{[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}</div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 italic">"{t.text}"</p>
-                <div className="mt-4">
-                  <p className="font-medium text-gray-900 dark:text-white text-sm">{t.name}</p>
-                  <p className="text-xs text-gray-500">{t.role}</p>
-                </div>
+                <div className="text-3xl mb-3">{t.icon}</div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{t.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{t.text}</p>
               </div>
             ))}
           </div>
@@ -248,8 +245,8 @@ export default function LandingPage() {
       {/* CTA */}
       <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto text-center bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl p-12">
-          <h2 className="text-3xl font-bold text-white">Ready to Digitize Your School?</h2>
-          <p className="mt-4 text-green-50">Start using AI School Noticeboard today — completely free, forever.</p>
+          <h2 className="text-3xl font-bold text-white">Ready to Get Started?</h2>
+          <p className="mt-4 text-green-50">Register your school today — it's completely free and takes just 2 minutes.</p>
           <Link to="/register" className="mt-6 inline-block bg-white text-green-700 font-semibold px-8 py-3 rounded-xl hover:bg-green-50 transition-colors">
             Register Your School — Free Forever
           </Link>
@@ -284,12 +281,12 @@ export default function LandingPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-white mb-3">Demo</h4>
+            <h4 className="font-semibold text-white mb-3">Support</h4>
             <ul className="space-y-2 text-sm">
-              <li>Admin: admin@demo-school.com</li>
-              <li>Teacher: teacher1@demo-school.com</li>
-              <li>Student: student1@demo-school.com</li>
-              <li>Parent: parent1@demo-school.com</li>
+              <li><a href="#" className="hover:text-white">Help Center</a></li>
+              <li><a href="#" className="hover:text-white">Documentation</a></li>
+              <li><a href="#" className="hover:text-white">Community</a></li>
+              <li><a href="#" className="hover:text-white">Contact Us</a></li>
             </ul>
           </div>
         </div>
